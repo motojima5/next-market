@@ -19,7 +19,7 @@ const DeleteItem = (context) => {
       const { id } = await context.params;
 
       const response = await fetch(
-        `http://localhost:3000/api/item/readsingle/${id}`,
+        `${process.env.NEXT_PUBLIC_URL}/api/item/readsingle/${id}`,
         { cache: "no-store" }
       );
       const jsonData = await response.json();
@@ -40,7 +40,7 @@ const DeleteItem = (context) => {
 
     try {
       const response = await fetch(
-        `http://localhost:3000/api/item/delete/${id}`,
+        `${process.env.NEXT_PUBLIC_URL}/api/item/delete/${id}`,
         {
           method: "DELETE",
           headers: {

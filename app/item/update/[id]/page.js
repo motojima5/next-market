@@ -18,7 +18,7 @@ const UpdateItem = (context) => {
       const { id } = await context.params;
 
       const response = await fetch(
-        `http://localhost:3000/api/item/readsingle/${id}`,
+        `${process.env.NEXT_PUBLIC_URL}/api/item/readsingle/${id}`,
         { cache: "no-store" }
       );
       const jsonData = await response.json();
@@ -39,7 +39,7 @@ const UpdateItem = (context) => {
 
     try {
       const response = await fetch(
-        `http://localhost:3000/api/item/update/${id}`,
+        `${process.env.NEXT_PUBLIC_URL}/api/item/update/${id}`,
         {
           method: "PUT",
           headers: {
@@ -106,8 +106,8 @@ const UpdateItem = (context) => {
         </form>
       </div>
     );
-  }else{
-    return <h1>権限がありません</h1>
+  } else {
+    return <h1>権限がありません</h1>;
   }
 };
 
