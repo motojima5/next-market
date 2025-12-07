@@ -27,9 +27,11 @@ const ReadAllItems = async () => {
             alt="item-image"
             priority
           />
-          <h2>¥{item.price}</h2>
-          <h3>{item.title}</h3>
-          <p>{item.description.substring(0, 80)}</p>
+          <div>
+            <h2>¥{item.price}</h2>
+            <h3>{item.title}</h3>
+            <p>{item.description.substring(0, 80)}</p>
+          </div>
         </Link>
       ))}
     </div>

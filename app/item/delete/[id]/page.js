@@ -24,7 +24,6 @@ const DeleteItem = (context) => {
       );
       const jsonData = await response.json();
       const singleItem = jsonData.singleItem;
-      console.log(singleItem);
       setTitle(singleItem.title);
       setPrice(singleItem.price);
       setImage(singleItem.image);
